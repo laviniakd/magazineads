@@ -1,0 +1,52 @@
+{
+  "name": "esquire_jp2",
+  "display_name": "Esquire (JP2 Format)",
+  "base_url": "https://archive.org/download/Esquire",
+  "custom_url_builder": "esquire",
+  "file_format": "jp2.zip",
+  "date_format": "%Y-%m",
+  "filename_pattern": "{date}-x-{number}",
+  "publication_frequency": "monthly",
+  "days_between_issues": 31,
+  "normalize_to_first_of_month": true,
+  "volume_placeholder": "x",
+  "biweekly_period": {
+    "start": "1978-03-01",
+    "end": "1979-07-31"
+  },
+  "url_format_rules": [
+    {
+      "condition": "old_format and not_in_biweekly_period",
+      "date_format": "%Y-%m",
+      "id_pattern": "-Magazine-{date}",
+      "path_pattern": "Esquire{id}",
+      "file_extension": "_jp2.zip"
+    },
+    {
+      "condition": "old_format and in_biweekly_period",
+      "date_format": "%Y-%m-%d",
+      "id_pattern": "-Magazine-{date}",
+      "path_pattern": "Esquire{id}",
+      "file_extension": "_jp2.zip",
+      "days_between_issues": 14
+    },
+    {
+      "condition": "not old_format",
+      "date_format": "%B_%Y",
+      "id_pattern": "{date}_USA",
+      "path_pattern": "Esquire_{id}",
+      "file_extension": "_jp2.zip"
+    }
+  ],
+  "default_basedir": "/data/dalc/magazines/esquire_jp2/",
+  "default_first_date": "1933-10-01",
+  "default_first_number": 1,
+  "default_last_date": "2020-12-01",
+  "default_last_number": 12,
+  "default_pause": 5,
+  "default_old_format": true,
+  "failure_strategy": "counter",
+  "max_failures": 10,
+  "retry_pause": 0.5,
+  "max_retries": 3
+}

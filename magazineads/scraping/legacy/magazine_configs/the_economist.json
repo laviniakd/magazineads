@@ -1,0 +1,38 @@
+{
+  "name": "the_economist",
+  "display_name": "The Economist",
+  "base_url": "https://archive.org/download/sim_economist_",
+  "url_pattern": "{date}_{volume}_{number}",
+  "url_path_pattern": "sim_economist_{date}_{volume}_{number}",
+  "date_format": "%Y-%m-%d",
+  "filename_pattern": "{date}-{volume}-{number}",
+  "publication_frequency": "weekly",
+  "days_between_issues": 7,
+  "volume_increment_rule": "biannual",
+  "volume_increment_months": [1, 7],
+  "custom_url_builder": "the_economist",
+  "url_pattern_rules": [
+    {
+      "condition": {"date_before": "1951-07-07"},
+      "url_pattern": "{date}_{volume}_{number}",
+      "url_path_pattern": "sim_economist_{date}_{volume}_{number}"
+    },
+    {
+      "condition": {"date_from": "1951-07-07"},
+      "url_pattern": "{date}_{volume}",
+      "url_path_pattern": "sim_economist_{date}_{volume}"
+    }
+  ],
+  "default_basedir": "/data/dalc/magazines/the_economist/",
+  "default_first_date": "1843-09-02",
+  "default_first_volume": 1,
+  "default_first_number": 1,
+  "default_last_date": "2020-12-31",
+  "default_last_volume": 437,
+  "default_last_number": 52,
+  "default_pause": 5,
+  "failure_strategy": "immediate",
+  "max_failures": 1,
+  "retry_pause": 3,
+  "max_retries": 3
+}

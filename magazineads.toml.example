@@ -1,0 +1,22 @@
+# magazineads.toml — project configuration
+#
+# Copy this file to magazineads.toml and edit to match your setup.
+# Alternatively, set the MAGAZINEADS_DATA_ROOT environment variable.
+#
+# Resolution order for data_root:
+#   1. This file ([paths] data_root)
+#   2. MAGAZINEADS_DATA_ROOT env var
+#   3. Default: ./data (relative to project root)
+
+[paths]
+# Base directory for all data (images, model outputs, predictions)
+data_root = "/data/magazines"
+
+# Override individual paths if your layout differs from the default.
+# All paths below default to subdirectories of data_root.
+#
+# images_dir = "/data/magazines/images"
+# surya_output_dir = "/data/magazines/surya_output"
+# embeddings_dir = "/data/magazines/embeddings"
+# predictions_dir = "/data/magazines/page_classification_predictions"
+# models_dir = "./models"
