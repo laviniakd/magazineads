@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Model weights (downloaded at runtime)
+*.pt
+*.safetensors
+*.joblib
+models/
+
+# Data
+data/
+*.npz
+*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
