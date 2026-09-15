@@ -1,6 +1,6 @@
-# magazineads
+# "Better Things for Better Living": A Pipeline for Downloading, Processing, and Analyzing Magazine Advertisements
 
-Computational pipeline for extracting and analyzing advertisements from 20th-century American magazine scans. This repository accompanies the dataset paper describing a corpus of 752,326 pages from five magazines (Time, Esquire, Life, Forbes, Variety), spanning 1924--2017.
+Computational pipeline for extracting and analyzing advertisements from 20th-century American magazine scans. This repository accompanies the dataset paper describing a corpus of 752,326 pages from five magazines (TIME, Esquire, LIFE, Forbes, Variety), spanning 1924--2017. TIME is not available on the Internet Archive; the downloading code in this repo only retrieves the other magazines.
 
 ## Pipeline overview
 
